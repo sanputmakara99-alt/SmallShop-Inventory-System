@@ -6,24 +6,36 @@ using namespace std;
 
 int main()
 {
-    // Using default constructor
-    Product product1;
+    Product product;
 
-    product1.setProductId("P001");
-    product1.setProductName("Coca Cola");
-    product1.setPrice(1.00);
-    product1.setQuantity(20);
+    string id;
+    string name;
+    double price;
+    int quantity;
 
-    cout << "Product 1" << endl;
-    product1.displayInfo();
+    cout << "===== Add Product =====" << endl;
+
+    cout << "Enter Product ID: ";
+    cin >> id;
+
+    cout << "Enter Product Name: ";
+    cin >> name;
+
+    cout << "Enter Price: ";
+    cin >> price;
+
+    cout << "Enter Quantity: ";
+    cin >> quantity;
+
+    product.setProductId(id);
+    product.setProductName(name);
+    product.setPrice(price);
+    product.setQuantity(quantity);
 
     cout << endl;
+    cout << "===== Product Information =====" << endl;
 
-    // Using parameterized constructor
-    Product product2("P002", "Bread", 1.50, 15);
-
-    cout << "Product 2" << endl;
-    product2.displayInfo();
+    product.displayInfo();
 
     return 0;
 }
